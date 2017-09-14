@@ -55,7 +55,14 @@
         </div>
       </div>
 
-      
+      <!-- sort by category start here -->
+      <div class="col-md-6">
+        <h2>Show Article based on Category </h2>
+        <div class="panel panel-primary" v-for="category in categories">
+          <router-link :to="'/category/'+category.name">{{category.name}}</router-link>
+        </div>
+      </div>
+      <!-- end here -->
 
     </div>
   </div>
