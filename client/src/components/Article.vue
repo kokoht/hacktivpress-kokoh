@@ -57,9 +57,15 @@
 
       <!-- sort by category start here -->
       <div class="col-md-6">
-        <h2>Show Article based on Category </h2>
+        <h2>Show Articles based on Category </h2>
         <div class="panel panel-primary" v-for="category in categories">
           <router-link :to="'/category/'+category.name">{{category.name}}</router-link>
+        </div>
+        <!-- sort by verified author -->
+        <h2>Show Articles based on Verified Author </h2>
+        <div class="panel panel-primary" v-for="article in articles">
+          <router-link :to="'/author/'+article.author._id">{{article.author.username}}</router-link>
+          <!-- should be author id -->
         </div>
       </div>
       <!-- end here -->
@@ -86,6 +92,11 @@ export default {
         {name: 'komedi'},
         {name: 'laga'},
         {name: 'dewasa'}
+      ],
+      authors: [
+        {name: 'joko '},
+        {name: 'baba'},
+        {name: 'lili'}
       ]
     }
   },
