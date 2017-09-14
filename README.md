@@ -32,6 +32,6 @@ List of filter Routes:
 | /category/:category     | GET    | find articles with this category                |
 
 ## How To Use The Program:
-npm install in client & server
-npm start on server
+npm install in client & server,
+npm start on server,
 npm run dev on client
