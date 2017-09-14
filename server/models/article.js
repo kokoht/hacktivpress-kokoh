@@ -9,7 +9,8 @@ const articleSchema = new Schema({
   },
   content: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   category: {
     type: String,

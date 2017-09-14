@@ -16,7 +16,7 @@ app.use(bodyParser.json({type: 'application/x-www-form-urlencoded'}))
 
 app.use(cors());
 
-// const articles = require('./routers/article')
+const articles = require('./routes/article')
 const user = require('./routes/user')
 
 app.get('/', function(req,res){
@@ -24,6 +24,6 @@ app.get('/', function(req,res){
 })
 
 app.use('/user', user)
-// app.use('/articles', articles)
+app.use('/articles', articles)
 
 app.listen(3000)
